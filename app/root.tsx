@@ -25,27 +25,29 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+      <html lang="en">
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
-        <Links />
+        <meta charSet="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <Meta/>
+        <Links/>
       </head>
-      <body>
+      <body className="flex justify-center items-center">
+      <div className="h-screen w-1/3 mx-auto bg-[#C5BFE5]">
         {children}
-        <ScrollRestoration />
-        <Scripts />
+      </div>
+      <ScrollRestoration/>
+      <Scripts/>
       </body>
-    </html>
+      </html>
   );
 }
 
 export default function App() {
-  return <Outlet />;
+  return <Outlet/>;
 }
 
-export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
+export function ErrorBoundary({error}: Route.ErrorBoundaryProps) {
   let message = "Oops!";
   let details = "An unexpected error occurred.";
   let stack: string | undefined;
