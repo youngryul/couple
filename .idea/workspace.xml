@@ -26,7 +26,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/couple/app/assets",
+    "last_opened_file_path": "D:/couple/app/lib",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -46,6 +46,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\couple\app\lib" />
       <recent name="D:\couple\app\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -71,7 +72,7 @@
       <workItem from="1742514211133" duration="2503000" />
       <workItem from="1742772980026" duration="588000" />
       <workItem from="1744616324540" duration="1361000" />
-      <workItem from="1744765065355" duration="786000" />
+      <workItem from="1744765065355" duration="2339000" />
     </task>
     <task id="LOCAL-00001" summary="feat: home 레이아웃 개발">
       <option name="closed" value="true" />
@@ -81,14 +82,34 @@
       <option name="project" value="LOCAL" />
       <updated>1744617739130</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: 메인 페이지 이미지 추가">
+      <option name="closed" value="true" />
+      <created>1744766201126</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744766201126</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: home 레이아웃 개발" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: home 레이아웃 개발" />
+    <MESSAGE value="feat: 메인 페이지 이미지 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 메인 페이지 이미지 추가" />
   </component>
 </project>
