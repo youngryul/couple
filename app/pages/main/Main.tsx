@@ -1,4 +1,9 @@
 export default function Main() {
-    return <span>1</span>
+    return (
+        <div className="h-full flex flex-col items-center justify-center">
+            <img src="app/assets/title.png"/>
+            <img src="app/assets/mainImg.png"/>
+        </div>
+    )
 };
 
