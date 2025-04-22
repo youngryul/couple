@@ -26,13 +26,14 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/couple/app/lib",
+    "last_opened_file_path": "D:/wemake",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MTConfigurable",
+    "prettierjs.PrettierConfiguration.Package": "D:\\couple\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "D:\\couple\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -72,7 +73,7 @@
       <workItem from="1742514211133" duration="2503000" />
       <workItem from="1742772980026" duration="588000" />
       <workItem from="1744616324540" duration="1361000" />
-      <workItem from="1744765065355" duration="2339000" />
+      <workItem from="1744765065355" duration="12120000" />
     </task>
     <task id="LOCAL-00001" summary="feat: home 레이아웃 개발">
       <option name="closed" value="true" />
@@ -90,7 +91,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744766201126</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: 버튼 공통 컴포넌트 &amp; 시작 페이지 연결">
+      <option name="closed" value="true" />
+      <created>1744780896215</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744780896215</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +119,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: home 레이아웃 개발" />
     <MESSAGE value="feat: 메인 페이지 이미지 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 메인 페이지 이미지 추가" />
+    <MESSAGE value="feat: 버튼 공통 컴포넌트 &amp; 시작 페이지 연결" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 버튼 공통 컴포넌트 &amp; 시작 페이지 연결" />
   </component>
 </project>

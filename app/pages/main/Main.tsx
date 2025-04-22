@@ -1,6 +1,13 @@
 import { Button } from "~/components/Button";
 import { Link } from "react-router";
 
+export function meta() {
+  return [
+    { title: "Haruming" },
+    { name: "description", content: "Welcome to Haruming service" },
+  ];
+}
+
 export default function Main() {
   return (
     <div className="h-full flex flex-col items-center justify-center gap-8">
