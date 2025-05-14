@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70550f07-b929-47ce-8a56-0c7499a9a65d" name="Changes" comment="" />
+    <list default="true" id="70550f07-b929-47ce-8a56-0c7499a9a65d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +29,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/wemake",
+    "last_opened_file_path": "D:/couple/app/pages/home",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,10 +50,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\couple\app\pages\home" />
+      <recent name="D:\couple\app\pages\story" />
       <recent name="D:\couple\app\lib" />
       <recent name="D:\couple\app\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\couple\app\assets" />
       <recent name="D:\couple\app\pages\main" />
     </key>
   </component>
@@ -74,6 +80,8 @@
       <workItem from="1742772980026" duration="588000" />
       <workItem from="1744616324540" duration="1361000" />
       <workItem from="1744765065355" duration="12120000" />
+      <workItem from="1745294579033" duration="7384000" />
+      <workItem from="1747188917689" duration="3930000" />
     </task>
     <task id="LOCAL-00001" summary="feat: home 레이아웃 개발">
       <option name="closed" value="true" />
@@ -99,7 +107,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744780896215</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: 메인 폴더 및 경로 변경 (rout 파일 삭제)">
+      <option name="closed" value="true" />
+      <created>1745294920949</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745294920949</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: 로그인 페이지 퍼블리싱 완료">
+      <option name="closed" value="true" />
+      <created>1745303851545</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1745303851545</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +144,8 @@
     <MESSAGE value="feat: home 레이아웃 개발" />
     <MESSAGE value="feat: 메인 페이지 이미지 추가" />
     <MESSAGE value="feat: 버튼 공통 컴포넌트 &amp; 시작 페이지 연결" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 버튼 공통 컴포넌트 &amp; 시작 페이지 연결" />
+    <MESSAGE value="fix: 메인 폴더 및 경로 변경 (rout 파일 삭제)" />
+    <MESSAGE value="feat: 로그인 페이지 퍼블리싱 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 로그인 페이지 퍼블리싱 완료" />
   </component>
 </project>
