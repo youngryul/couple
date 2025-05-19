@@ -2,8 +2,8 @@ import { useState } from "react";
 import dayjs from "dayjs";
 
 const events: Record<string, string[]> = {
-  "2025-05-21": ["💖 데이트", "🎂 기념일"],
-  "2025-05-25": ["🌸 벚꽃놀이"],
+  "2025-05-21": ["💖", "🎂"],
+  "2025-05-25": ["🌸"],
 };
 const DAYS = ["S", "M", "T", "W", "T", "F", "S"];
 
@@ -47,7 +47,7 @@ export default function Calendar() {
           <div key={day}>{day}</div>
         ))}
       </div>
-      <div className="grid grid-cols-7 gap-y-2 text-center text-[#3C3C3C] mt-2">
+      <div className="grid grid-cols-7 gap-y-4 gap-x-1 text-center text-[#3C3C3C] mt-4">
         {generateDates().map((date, idx) => {
           const fullDate = date
             ? currentDate.date(date).format("YYYY-MM-DD")
