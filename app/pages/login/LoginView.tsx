@@ -1,6 +1,7 @@
 import { Button } from "~/components/Button";
+import { Link } from "react-router";
 
-export default function Login() {
+export default function LoginView() {
   return (
     <div className="h-full w-full flex flex-col items-center justify-center gap-8">
       <img src="app/assets/loginImg.png" />
@@ -19,7 +20,9 @@ export default function Login() {
           />
           카카오톡으로 로그인
         </Button>
-        <Button>하루밍으로 로그인</Button>
+        <Button>
+          <Link to="/login/haru">하루밍으로 로그인</Link>
+        </Button>
       </div>
     </div>
   );
