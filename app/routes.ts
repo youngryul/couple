@@ -7,4 +7,6 @@ export default [
   route("/home", "pages/home/Home.tsx"),
   route("/calendar", "pages/calendar/CalendarView.tsx"),
   route("/login/haru", "pages/login/components/Login.tsx"),
+  route("/daily", "pages/daily/list.tsx"),
+  route("/daily/{id}", "pages/daily/item.tsx"),
 ] satisfies RouteConfig;
