@@ -1,6 +1,7 @@
 import { Button } from "~/components/Button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import BottomNav from "~/components/BottomNav";
 
 export default function Home() {
   return (

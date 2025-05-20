@@ -5,10 +5,12 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from "react-router";
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import BottomNav from "~/components/BottomNav";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -24,6 +26,10 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const location = useLocation();
+  const hideBottomNavRoutes = ["/", "/login", "/login/haru"]; // bottom nav 작동 안하는 페이지
+  const shouldHideBottomNav = hideBottomNavRoutes.includes(location.pathname);
+
   return (
     <html lang="en">
       <head>
@@ -32,10 +38,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="flex justify-center items-center min-h-screen">
-        <div className="relative w-full max-w-[390px] min-w-[320px] h-screen overflow-y-autoshadow-md bg-[#C5BFE5]">
-          {children}
+      <body className="flex justify-center items-center min-h-screen bg-[#C5BFE5]">
+        <div className="relative w-full max-w-[390px] min-w-[320px] h-screen bg-[#C5BFE5] flex flex-col">
+          <div className="flex-1 overflow-y-auto pb-20">{children}</div>
+          {!shouldHideBottomNav && (
+            <div className="absolute bottom-0 left-0 w-full">
+              <BottomNav />
+            </div>
+          )}
         </div>
+
         <ScrollRestoration />
         <Scripts />
       </body>
