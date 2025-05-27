@@ -9,6 +9,6 @@ export default [
   route("/login/haru", "pages/login/components/Login.tsx"),
   ...prefix("/daily", [
     index("pages/daily/list.tsx"),
-    route("/{id}", "pages/daily/item.tsx"),
+    route("/:id", "pages/daily/item.tsx"),
   ]),
 ] satisfies RouteConfig;

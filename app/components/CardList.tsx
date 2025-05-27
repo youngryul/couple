@@ -1,4 +1,5 @@
 import { Card, CardContent } from "~/components/ui/card";
+import { useNavigate } from "react-router";
 
 interface ListItem {
   id: number;
@@ -8,6 +9,8 @@ interface ListItem {
 }
 
 const CardList = () => {
+  const navigate = useNavigate();
+  
   const items: ListItem[] = [
     {
       id: 1,
@@ -30,14 +33,18 @@ const CardList = () => {
   ];
 
   const onClickItem = (item: ListItem) => {
-    window.history.pushState({}, '', `/question/${item.id}`);
+    navigate(`/daily/${item.id}`);
   }
 
   return (
     <div className="max-w-md mx-auto p-2">
       <div className="space-y-2">
         {items.map((item) => (
-          <Card key={item.id} className="w-full bg-secondary hover:cursor-pointer">
+          <Card 
+            key={item.id} 
+            className="w-full bg-secondary hover:cursor-pointer"
+            onClick={() => onClickItem(item)}
+          >
             <CardContent className="p-x-4 flex items-start gap-4 bg-secondary">
               <div className="flex-shrink-0 w-8 h-8 text-secondary-foreground flex items-center justify-center">
                 # {item.num}

@@ -2,7 +2,7 @@ import CardList from "../../components/CardList";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="h-full overflow-y-auto scrollbar-hide">
       <CardList />
     </main>
   );

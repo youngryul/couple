@@ -1,3 +1,7 @@
+import { useNavigate } from "react-router";
+import { useState } from "react";
+import { Alert, AlertDescription } from "~/components/ui/alert";
+
 export default function item(){
     interface params {
         id: number;
@@ -7,32 +11,46 @@ export default function item(){
         yourContent: string;
       }
 
+    const navigate = useNavigate();
+    const [myContent, setMyContent] = useState("받은 데이터로 나타내기");
+    const [showAlert, setShowAlert] = useState(false);
+    const [maxLength, setMaxLength] = useState(200);
+
     const item: params = {
         id: 1,
         num: 1,
-        title: "상대의 첫인상은 어떠했나요?",
-        myContent: "쪼아용",
+        title: "데이터 받는 법 확인하기",
+        myContent: myContent,
         yourContent: "쪼쪼아용"
     };
 
-    let maxLength = 200;
-
     const onClickIncreaseCharBtn = () => {
         //todo 광고불러오고 글자수 500자로 늘리기
-        maxLength = 500;
         if(confirm('광고시청 후 최대길이가 500자로 증가됩니다.')) {
-            alert(`글자수가 ${maxLength}자로 증가되었습니다.`);
+            setMaxLength(500);
+            setShowAlert(true);
+            setTimeout(() => setShowAlert(false), 3000);
         }
     };
 
     const onClickBackListBtn = () => {
-        // window.location.href = '/question';
-        window.history.pushState({}, '', '/question');
+        navigate('/daily');
     }
 
+    const handleMyContentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        setMyContent(e.target.value);
+    };
+
     return (
-        <main className="min-h-screen bg-background">
+        <main className="h-full overflow-y-auto scrollbar-hide">
             <div className="max-w-2xl mx-auto p-4 space-y-4">
+                {showAlert && (
+                    <Alert className="fixed top-4 left-1/2 -translate-x-1/2 w-full max-w-[390px] z-50">
+                        <AlertDescription>
+                            글자수가 {maxLength}자로 증가되었습니다.
+                        </AlertDescription>
+                    </Alert>
+                )}
                 {/* 상단 버튼 영역 */}
                 <div className="flex justify-between items-center mb-4">
                     <button 
@@ -60,7 +78,8 @@ export default function item(){
                     <textarea 
                         className="w-full min-h-[200px] p-3 rounded-md bg-background text-foreground resize-none focus:outline-none focus:ring-2 focus:ring-primary"
                         placeholder="답변을 입력해주세요..."
-                        value={item.myContent}
+                        value={myContent}
+                        onChange={handleMyContentChange}
                         maxLength={maxLength}
                     />
                 </div>
@@ -76,8 +95,8 @@ export default function item(){
                     />
                 </div>
             </div>
-            <div className="fixed bottom-0 left-0 right-0 p-4 bg-background border-t">
-                <div className="max-w-2xl mx-auto">
+            <div className="fixed bottom-20 left-1/2 -translate-x-1/2 w-full max-w-[390px] p-4">
+                <div className="w-full">
                     <button className="w-full bg-primary text-primary-foreground py-3 px-6 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
                         등록하기
                     </button>
