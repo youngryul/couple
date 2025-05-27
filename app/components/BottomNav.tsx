@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router";
 
 const tabs = [
-  { name: "mail", path: "/", src: "/app/assets/mail.png" },
+  { name: "mail", path: "/daily", src: "/app/assets/mail.png" },
   { name: "home", path: "/home", src: "/app/assets/home.png" },
   { name: "calendar", path: "/calendar", src: "/app/assets/calendar.png" },
   { name: "mypage", path: "/", src: "/app/assets/mypage.png" },
