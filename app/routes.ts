@@ -1,4 +1,4 @@
-import { type RouteConfig, index, route } from "@react-router/dev/routes";
+import { type RouteConfig, index, prefix, route } from "@react-router/dev/routes";
 
 export default [
   index("pages/main/Main.tsx"),
@@ -7,6 +7,8 @@ export default [
   route("/home", "pages/home/Home.tsx"),
   route("/calendar", "pages/calendar/CalendarView.tsx"),
   route("/login/haru", "pages/login/components/Login.tsx"),
-  route("/daily", "pages/daily/list.tsx"),
-  route("/daily/{id}", "pages/daily/item.tsx"),
+  ...prefix("/daily", [
+    index("pages/daily/list.tsx"),
+    route("/{id}", "pages/daily/item.tsx"),
+  ]),
 ] satisfies RouteConfig;
