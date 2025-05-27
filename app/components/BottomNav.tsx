@@ -6,7 +6,7 @@ const tabs = [
   { name: "mail", path: "/daily", src: "/app/assets/mail.png" },
   { name: "home", path: "/home", src: "/app/assets/home.png" },
   { name: "calendar", path: "/calendar", src: "/app/assets/calendar.png" },
-  { name: "mypage", path: "/", src: "/app/assets/mypage.png" },
+  { name: "mypage", path: "/home", src: "/app/assets/mypage.png" },
 ];
 
 export default function BottomNav() {
