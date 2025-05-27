@@ -11,6 +11,8 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import BottomNav from "~/components/BottomNav";
+import Header from "~/components/Header";
+import { HeaderProvider } from "~/contexts/HeaderContext";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -28,7 +30,9 @@ export const links: Route.LinksFunction = () => [
 export function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
   const hideBottomNavRoutes = ["/", "/login", "/login/haru"]; // bottom nav 작동 안하는 페이지
+  const hideHeaderRoutes = ["/", "/login", "/login/haru", "/home"]; // header 작동 안하는 페이지
   const shouldHideBottomNav = hideBottomNavRoutes.includes(location.pathname);
+  const shouldHideHeader = hideHeaderRoutes.includes(location.pathname);
 
   return (
     <html lang="en">
@@ -40,12 +44,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body className="flex justify-center items-center min-h-screen bg-[#C5BFE5]">
         <div className="relative w-full max-w-[390px] min-w-[320px] h-screen bg-[#C5BFE5] flex flex-col">
-          <div className="flex-1 overflow-y-auto pb-20">{children}</div>
-          {!shouldHideBottomNav && (
-            <div className="absolute bottom-0 left-0 w-full">
-              <BottomNav />
-            </div>
-          )}
+          <HeaderProvider>
+            {!shouldHideHeader && <Header />}
+            <div className="flex-1 overflow-y-auto pb-20">{children}</div>
+            {!shouldHideBottomNav && (
+              <div className="absolute bottom-0 left-0 w-full">
+                <BottomNav />
+              </div>
+            )}
+          </HeaderProvider>
         </div>
 
         <ScrollRestoration />
