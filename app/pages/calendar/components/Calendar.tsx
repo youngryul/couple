@@ -1,5 +1,6 @@
 import { useState } from "react";
 import dayjs from "dayjs";
+import { v4 as uuidv4 } from "uuid";
 
 const events: Record<string, string[]> = {
   "2025-05-21": ["💖", "🎂"],
@@ -10,15 +11,18 @@ const DAYS = ["S", "M", "T", "W", "T", "F", "S"];
 export default function Calendar() {
   const [currentDate, setCurrentDate] = useState(dayjs());
 
-  const startOfMonth = currentDate.startOf("month");
-  const endOfMonth = currentDate.endOf("month");
-  const startDay = startOfMonth.day();
-  const daysInMonth = currentDate.daysInMonth();
-
-  const prevMonth = () => setCurrentDate(currentDate.subtract(1, "month"));
-  const nextMonth = () => setCurrentDate(currentDate.add(1, "month"));
+  const prevMonth = () =>
+    setCurrentDate(currentDate.clone().subtract(1, "month"));
+  const nextMonth = () => {
+    const next = currentDate.clone().add(1, "month");
+    console.log("NEXT MONTH:", next.format("YYYY-MM")); // 디버깅 포인트
+    setCurrentDate(next);
+  };
 
   const generateDates = () => {
+    const startDay = currentDate.startOf("month").day();
+    const daysInMonth = currentDate.daysInMonth();
+
     const dates = [];
     for (let i = 0; i < startDay; i++) {
       dates.push(null);
@@ -38,19 +42,19 @@ export default function Calendar() {
         <h2 className="text-xl font-bold text-[#553D3C]">
           {currentDate.format("YYYY MMMM")}
         </h2>
-        <button onClick={nextMonth} className="text-xl">
+        <button onClick={nextMonth} className="text-xl z-50">
           ▶
         </button>
       </div>
       <div className="grid grid-cols-7 text-center font-semibold text-[#705f5e]">
-        {DAYS.map((day) => (
-          <div key={day}>{day}</div>
+        {DAYS.map((day, idx) => (
+          <div key={idx}>{day}</div>
         ))}
       </div>
       <div className="grid grid-cols-7 gap-y-4 gap-x-1 text-center text-[#3C3C3C] mt-4">
         {generateDates().map((date, idx) => {
           const fullDate = date
-            ? currentDate.date(date).format("YYYY-MM-DD")
+            ? currentDate.clone().date(date).format("YYYY-MM-DD")
             : null;
           const dailyEvents = fullDate && events[fullDate];
 
