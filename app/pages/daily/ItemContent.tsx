@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Alert, AlertDescription } from "~/components/ui/alert";
 import { Button } from "~/components/Button";
+import Confirm from "~/components/Confirm";
 
 interface ItemContentProps {
   item: {
@@ -17,6 +18,7 @@ export default function ItemContent({ item, onClose }: ItemContentProps) {
   const [myContent, setMyContent] = useState("받은 데이터로 나타내기");
   const [showAlert, setShowAlert] = useState(false);
   const [maxLength, setMaxLength] = useState(200);
+  const [showConfirm, setShowConfirm] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const handleMyContentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -83,13 +85,7 @@ export default function ItemContent({ item, onClose }: ItemContentProps) {
 
       <div className="flex-none p-3 border-t">
         <Button 
-          onClick={() => {
-            if(confirm('광고시청 후 최대길이가 500자로 증가됩니다.')) {
-              setMaxLength(500);
-              setShowAlert(true);
-              setTimeout(() => setShowAlert(false), 3000);
-            }
-          }}
+          onClick={() => setShowConfirm(true)}
           variant="default"
           size="s"
           width="fit"
@@ -97,6 +93,20 @@ export default function ItemContent({ item, onClose }: ItemContentProps) {
           글자 수 늘리기
         </Button>
       </div>
+
+      <Confirm
+        isOpen={showConfirm}
+        onClose={() => setShowConfirm(false)}
+        onConfirm={() => {
+          setMaxLength(500);
+          setShowAlert(true);
+          setTimeout(() => setShowAlert(false), 3000);
+        }}
+        title="글자 수 늘리기"
+        message="광고시청 후 최대길이가 500자로 증가됩니다."
+        confirmText="확인"
+        cancelText="취소"
+      />
     </div>
   );
 } 
