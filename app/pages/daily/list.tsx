@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, CardContent } from "~/components/ui/card";
 import LayerPopup from "~/components/LayerPopup";
 import ItemContent from "~/pages/daily/ItemContent";
+import type { Route } from "./+types/list";
 
 interface ListItem {
   id: number;
@@ -11,32 +12,34 @@ interface ListItem {
   date: string;
 }
 
-export default function Home() {
-  const [selectedItem, setSelectedItem] = useState<ListItem | null>(null);
-  
-  const items: ListItem[] = [
+export const loader = () => {
+  return [
     {
       id: 1,
-      num : 1,
+      num: 1,
       title: "상대의 첫인상은 어떠했나요?", 
       content: "이것은 첫 번째 질문의 답변입니다.",
       date: "2024.03.20"
     },
     {
       id: 2,
-      num : 2,
+      num: 2,
       title: "상대와 연애하기로 마음먹은 계기가 무엇인가요?",
       content: "이것은 두 번째 질문의 답변입니다.",
       date: "2024.03.21"
     },
     {
       id: 3,
-      num : 3,
+      num: 3,
       title: "세 번째 질문",
       content: "이것은 세 번째 질문의 답변입니다.",
       date: "2024.03.22"
     },
   ];
+};
+
+export default function Home({loaderData}: Route.ComponentProps) {
+  const [selectedItem, setSelectedItem] = useState<ListItem | null>(null);
 
   const onClickItem = (item: ListItem) => {
     console.log('Selected item:', item);
@@ -51,7 +54,7 @@ export default function Home() {
     <main className="h-full overflow-y-auto scrollbar-hide">
       <div className="max-w-md mx-auto p-2">
         <div className="space-y-2">
-          {items.map((item) => (
+          {loaderData.map((item) => (
             <Card 
               key={item.id} 
               className="w-full bg-secondary hover:cursor-pointer h-[88px]"
