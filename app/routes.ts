@@ -18,4 +18,5 @@ export default [
   ]),
   route("/diary", "pages/diary/Diary.tsx"),
   route("/mypage", "pages/mypage/MyPage.tsx"),
+  route("/avatar", "pages/avatarSelect/AvatarSelect.tsx"),
 ] satisfies RouteConfig;
