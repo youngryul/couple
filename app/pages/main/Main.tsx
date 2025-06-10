@@ -9,7 +9,12 @@ export default function Main() {
         <img className="w-[330px]" src="app/assets/mainImg.png" />
       </div>
       <Button variant="default" size="s" className="w-1/2" asChild>
-        <Link to="/login">시작</Link>
+        <Link
+          to="/login"
+          className="block w-full h-full flex items-center justify-center"
+        >
+          시작
+        </Link>
       </Button>
     </div>
   );

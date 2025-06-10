@@ -1,6 +1,5 @@
 import { useState } from "react";
 import dayjs from "dayjs";
-import { v4 as uuidv4 } from "uuid";
 
 const events: Record<string, string[]> = {
   "2025-05-21": ["💖", "🎂"],
@@ -15,7 +14,6 @@ export default function Calendar() {
     setCurrentDate(currentDate.clone().subtract(1, "month"));
   const nextMonth = () => {
     const next = currentDate.clone().add(1, "month");
-    console.log("NEXT MONTH:", next.format("YYYY-MM")); // 디버깅 포인트
     setCurrentDate(next);
   };
 
