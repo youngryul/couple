@@ -193,7 +193,6 @@ export default function ItemContent({ item, onClose }: ItemContentProps) {
           {myContent.length}/{maxLength}
         </div>
       </div>
-
       <div className="bg-white rounded-lg p-4 shadow-sm mb-3">
         <h3 className="text-lg font-semibold text-gray-800 mb-3">연인의 답변</h3>
         <textarea 

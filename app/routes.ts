@@ -13,8 +13,8 @@ export default [
   route("/calendar", "pages/calendar/CalendarView.tsx"),
   route("/login/haru", "pages/login/components/Login.tsx"),
   ...prefix("/daily", [
-    index("pages/daily/list.tsx"),
-    route("/:id", "pages/daily/item.tsx"),
+    index("pages/daily/List.tsx"),
+    route("/:id", "pages/daily/Item.tsx"),
   ]),
   route("/diary", "pages/diary/Diary.tsx"),
   route("/mypage", "pages/mypage/MyPage.tsx"),

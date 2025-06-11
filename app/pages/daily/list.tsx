@@ -73,7 +73,6 @@ export default function Home({loaderData}: Route.ComponentProps) {
           ))}
         </div>
       </div>
-
       <LayerPopup isOpen={!!selectedItem} onClose={handleClose} title="하루밍">
         {selectedItem && <ItemContent item={selectedItem} onClose={handleClose} />}
       </LayerPopup>
