@@ -1,0 +1,102 @@
+{
+  "id": "41d2b80a-5032-48ab-8378-9e59b8d36313",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.diary": {
+      "name": "diary",
+      "schema": "",
+      "columns": {
+        "diary_id": {
+          "name": "diary_id",
+          "type": "varchar(30)",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "input_id": {
+          "name": "input_id",
+          "type": "varchar(30)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "input_dt": {
+          "name": "input_dt",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "mood_type": {
+          "name": "mood_type",
+          "type": "mood_type",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "content": {
+          "name": "content",
+          "type": "varchar(500)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "file_id": {
+          "name": "file_id",
+          "type": "varchar(30)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "couple_yn": {
+          "name": "couple_yn",
+          "type": "couple_yn",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "update_dt": {
+          "name": "update_dt",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {
+    "public.couple_yn": {
+      "name": "couple_yn",
+      "schema": "public",
+      "values": [
+        "Y",
+        "N"
+      ]
+    },
+    "public.mood_type": {
+      "name": "mood_type",
+      "schema": "public",
+      "values": [
+        "HAPPY",
+        "SAD",
+        "ANGRY",
+        "EXCITED",
+        "TIRED"
+      ]
+    }
+  },
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

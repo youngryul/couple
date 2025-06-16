@@ -12,6 +12,7 @@ export default function Diary() {
     weekday: undefined,
   });
 
+  // todo 작성완료에 db insert 시 routes link가 먹지 않는 현상이 발생 (ssr 문제?)
   return (
     <div className="h-full text-white flex flex-col px-4 py-6 relative gap-4">
       {/* 날짜 */}
