@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router";
 import { Card, CardContent } from "~/components/ui/card";
 import LayerPopup from "~/components/LayerPopup";
 import ItemContent from "~/pages/daily/ItemContent";
-import type { Route } from "./+types/Lists";
+import type { Route } from "./+types/List";
 
 // 데이터의 타입을 정의합니다
 interface ListItem {
