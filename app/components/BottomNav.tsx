@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router";
 
 const tabs = [
   { name: "mail", path: "/daily", src: "/app/assets/mail.png" },
+  { name: "diary", path: "/diaryList", src: "/app/assets/diary.png" },
   { name: "home", path: "/home", src: "/app/assets/home.png" },
   { name: "calendar", path: "/calendar", src: "/app/assets/calendar.png" },
   { name: "mypage", path: "/mypage", src: "/app/assets/mypage.png" },
