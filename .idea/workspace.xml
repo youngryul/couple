@@ -43,9 +43,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.db:studio.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "D:\\couple\\node_modules\\prettier",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "C:\\Users\\rbals\\dev\\react\\couple\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "D:\\couple\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -59,15 +60,41 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\couple\app\assets" />
-      <recent name="D:\couple\app\pages\calendar\components" />
+      <recent name="D:\couple\app\assets\bear" />
+      <recent name="D:\couple\app\assets\dog" />
+      <recent name="D:\couple\app\assets\cat" />
       <recent name="D:\couple\app\pages" />
-      <recent name="D:\couple\app\pages\home" />
-      <recent name="D:\couple\app\pages\story" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\couple\app" />
       <recent name="D:\couple\app\assets" />
       <recent name="D:\couple\app\pages\main" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="db:studio" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="db:studio" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.db:studio" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -85,6 +112,11 @@
       <workItem from="1747188917689" duration="4975000" />
       <workItem from="1747634120966" duration="8147000" />
       <workItem from="1747700727765" duration="1879000" />
+      <workItem from="1749628903817" duration="2618000" />
+      <workItem from="1750052792514" duration="6982000" />
+      <workItem from="1750117612341" duration="1017000" />
+      <workItem from="1750201566524" duration="2859000" />
+      <workItem from="1750312435764" duration="1128000" />
     </task>
     <task id="LOCAL-00001" summary="feat: home 레이아웃 개발">
       <option name="closed" value="true" />
@@ -158,7 +190,55 @@
       <option name="project" value="LOCAL" />
       <updated>1747749228126</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: 일기 작성 페이지 퍼블리싱">
+      <option name="closed" value="true" />
+      <created>1749539693804</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1749539693804</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: 캐릭터 선정 페이지 (현재 오류 있음)">
+      <option name="closed" value="true" />
+      <created>1749543012517</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1749543012517</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: drizzle 세팅">
+      <option name="closed" value="true" />
+      <created>1749631643155</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1749631643155</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: 일기 조회 페이지 분리">
+      <option name="closed" value="true" />
+      <created>1750056530775</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1750056530775</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: 일기 main schema 작성">
+      <option name="closed" value="true" />
+      <created>1750060793468</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1750060793468</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix: 일기 db 컬럼 수정">
+      <option name="closed" value="true" />
+      <created>1750117951702</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1750117951702</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +265,12 @@
     <MESSAGE value="feat: 달력 기능 개발" />
     <MESSAGE value="feat: 달력 디자인 이미지 추가" />
     <MESSAGE value="feat: 데일리 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 데일리 추가" />
+    <MESSAGE value="feat: 일기 작성 페이지 퍼블리싱" />
+    <MESSAGE value="feat: 캐릭터 선정 페이지 (현재 오류 있음)" />
+    <MESSAGE value="feat: drizzle 세팅" />
+    <MESSAGE value="feat: 일기 조회 페이지 분리" />
+    <MESSAGE value="feat: 일기 main schema 작성" />
+    <MESSAGE value="fix: 일기 db 컬럼 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 일기 db 컬럼 수정" />
   </component>
 </project>
