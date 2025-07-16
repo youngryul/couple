@@ -37,12 +37,14 @@
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/couple",
+    "last_opened_file_path": "D:/stec_erp_front",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.db:generate.executor": "Run",
+    "npm.db:migrate.executor": "Run",
     "npm.db:studio.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "D:\\couple\\node_modules\\prettier",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
@@ -71,7 +73,27 @@
       <recent name="D:\couple\app\pages\main" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.db:migrate">
+    <configuration name="db:generate" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="db:generate" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="db:migrate" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="db:migrate" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="db:studio" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -84,6 +106,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.db:migrate" />
+        <item itemvalue="npm.db:generate" />
         <item itemvalue="npm.db:studio" />
       </list>
     </recent_temporary>
@@ -117,6 +141,9 @@
       <workItem from="1750117612341" duration="1017000" />
       <workItem from="1750201566524" duration="2859000" />
       <workItem from="1750312435764" duration="1128000" />
+      <workItem from="1750830592400" duration="6171000" />
+      <workItem from="1752018257286" duration="8926000" />
+      <workItem from="1752102618090" duration="146000" />
     </task>
     <task id="LOCAL-00001" summary="feat: home 레이아웃 개발">
       <option name="closed" value="true" />
@@ -238,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750117951702</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: 일기 조회 로직 추가 및 날짜 변경(캘린더 모달)추가">
+      <option name="closed" value="true" />
+      <created>1750837846292</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1750837846293</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +306,8 @@
     <MESSAGE value="feat: 일기 조회 페이지 분리" />
     <MESSAGE value="feat: 일기 main schema 작성" />
     <MESSAGE value="fix: 일기 db 컬럼 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 일기 db 컬럼 수정" />
+    <MESSAGE value="feat: 일기 조회 로직 추가 및 날짜 변경(캘린더 모달)추가" />
+    <MESSAGE value="fix: 캐릭터 선정 페이지 애니메이션 수정( 아직도.... 어색함 좀 더 수정필요)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 캐릭터 선정 페이지 애니메이션 수정( 아직도.... 어색함 좀 더 수정필요)" />
   </component>
 </project>

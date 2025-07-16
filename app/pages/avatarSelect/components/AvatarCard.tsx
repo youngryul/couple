@@ -1,19 +1,39 @@
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
+import { motion, useTransform, useSpring, useMotionValue } from "framer-motion";
 
-export const AvatarCard = ({ char, isSelected, onClick }) => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+interface Character {
+  id: string;
+  name: string;
+  image: string;
+}
+
+interface AvatarCardProps {
+  char: Character;
+  index: number;
+  currentIndex: number;
+  onClick: () => void;
+  cardWidth: number;
+}
+
+export const AvatarCard = ({
+  char,
+  index,
+  currentIndex,
+  onClick,
+  cardWidth,
+}: AvatarCardProps) => {
+  const offset = index - currentIndex;
+  const distance = useMotionValue(Math.abs(offset));
+  distance.set(Math.abs(offset));
+  const rawScale = useTransform(distance, [0, 1, 2], [1.2, 1, 0.9]);
+  const scale = useSpring(rawScale, { stiffness: 200, damping: 20 });
 
   return (
     <motion.div
-      ref={ref}
       onClick={onClick}
-      className={`snap-center shrink-0 w-60 flex flex-col items-center p-4 rounded-2xl cursor-pointer transition-all duration-200 ${
-        isSelected ? "bg-green-200 scale-105 shadow-xl" : "bg-white"
+      className={`w-[${cardWidth}px] shrink-0 flex flex-col items-center p-4 rounded-2xl cursor-pointer ${
+        index === currentIndex ? "bg-green-200 shadow-xl" : ""
       }`}
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      style={{ scale }}
     >
       <img
         src={char.image}
